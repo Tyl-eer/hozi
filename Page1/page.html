@@ -9,6 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="/Page1/page.css" rel="stylesheet">
     <title>Tenant module</title>
+    <script src="js/msdropdown/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="js/msdropdown/jquery.dd.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/msdropdown/dd.css" />
+
   </head>
   <body>
       <!-- navbar -->
@@ -20,19 +24,10 @@
           </a>
           <h1>Dashboard</h1>
           <h5 class="design-6 text-muted">Kevin Kamau <img src="../assets/Images/icon.png" width="35" height="35" >
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Messages <span class="badge pull-right"> 42 </span></a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
-                  </ul>
-            </a>
+            <select name="webmenu" id="webmenu"  onchange="showValue(this.value)">
+                <option value="my profile">My profile</option>
+                <option value="change pad"  selected="selected">Change pad</option>
+              </select>
         </h5>
         </div>
       </nav>
@@ -68,7 +63,7 @@
   <section class="details-card ">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-lg-4">
+            <div class="col-md-6 col-lg-3">
                 <div class="well">
                 <div class="card-content ">
                     <div class="card-img ">
@@ -82,7 +77,7 @@
                 </div>
             </div>
             </div>
-            <div class="col-md-3 col-lg-4">
+            <div class="col-md-6 col-lg-3">
                 <div class="well">
                 <div class="card-content">
                     <div class="card-img ">
@@ -96,8 +91,7 @@
                 </div>
                 </div>
             </div>
-
-            <div class="col-md-3 col-lg-4 ">
+            <div class="col-md-6 col-lg-3 ">
                 <div class="well">
                 <div class="card-content">
                     <div class="card-img">
@@ -111,7 +105,7 @@
                 </div>
             </div>
             </div>
-            <div class="col-md-3 col-lg-4 ">
+            <div class="col-md-6 col-lg-3 ">
                 <div class="well">
                 <div class="card-content">
                     <div class="card-img">
@@ -125,15 +119,16 @@
                 </div>
             </div>
             </div>
-            <div class="col-md-3 col-lg-4 ">
+        </div>
+            <div class="container">
+            <div class="col-md-6 col-lg-10 ">
                 <div class="well">
                 <div class="card-content">
-                    <div class="card-img">
-                        <img src="https://placeimg.com/380/230/hike" alt="">
+                    <div class="card-image">
+                        <img src="../assets/Images/stock.png" alt="">
                     </div>
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
-                            voluptas totam</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             <a href="#" class="btn-card">Read</a>   
                     </div>
                 </div>
@@ -141,12 +136,15 @@
             </div>
     </div>
     </div>
+
+    <div class="center">
+        <h1 class="display-6 justify-content-center"> Advertisements</h1>
+    </div>
+
   <div class="container">
+      <div class="justify-content-lg-center">
       <div class="row">
-          <div class="col-md-2 col-lg-3">
-              <div class="text">
-            <h1 class="display-6 justify-content-center"> Advertisements</h1>
-        </div>
+          <div class="col-md-4 col-lg-3  ">
               <div class="well">
                 <div class="card-content">
                     <div class="card-img">
@@ -159,8 +157,7 @@
           </div>
       </div>
   </div>
-          <!-- <div class="col-md-2 col-lg-3">
-              
+           <div class="col-md-2 col-lg-3">
               <div class="well">
                 <div class="card-content">
                     <div class="card-img">
@@ -172,10 +169,28 @@
               </div>
           </div>
       </div> 
-  </div> -->
+  </div>
+           <div class="col-md-2 col-lg-3">
+              <div class="well">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="https://placeimg.com/380/230/mountains" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+              </div>
+          </div>
+      </div> 
+  </div>
+</div>
+</div>
+
   </div>
   </div>
 </section>
+<!-- footer area -->
+<div class="center">
 <footer>
     <p class="lead">Nexus
     <ul>
@@ -183,5 +198,17 @@
     </ul>
 </p>
   </footer>
+  </div>
+
+    
+  <script language="javascript">
+    $(document).ready(function(e) {
+    try {
+    $("body select").msDropDown();
+    } catch(e) {
+    alert(e.message);
+    }
+    });
+    </script>
   </body>
 </html>
